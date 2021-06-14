@@ -1,0 +1,28 @@
+﻿<Page x:Class="Session_1.Manager_C"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Session_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Manager_C">
+    <Page.Resources>
+        <Style x:Key="Button">
+            <Setter Property="Control.Width" Value="175" />
+            <Setter Property="Control.Height" Value="32" />
+            <Setter Property="Control.VerticalAlignment" Value="Top" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Button Content="Выход"           Margin="300,224,0,0" x:Name="Exit"      Style="{StaticResource Button}" Click="Exit_Click"/>
+        <Button Content="Павильоны"       Margin="300,187,0,0" x:Name="Pavilions" Style="{StaticResource Button}" Click="Pavilions_Click"/>
+        <Button Content="Торговые Центры" Margin="300,150,0,0" x:Name="SC"        Style="{StaticResource Button}" Click="SC_Click"/>
+        <Button Content="Сотрудники" Margin="300,113,0,0" x:Name="Employees"        Style="{StaticResource Button}" Click="Employees_Click" />
+        <Label x:Name="Notify"  HorizontalAlignment="Left" Margin="150,261,0,0" VerticalAlignment="Top" Width="325" Height="27"/>
+        <Button x:Name="Rentors" Content="Арендаторы" HorizontalAlignment="Left" Margin="300,73,0,0" VerticalAlignment="Top" Width="175" Height="35" Click="Rentors_Click"/>
+
+    </Grid>
+</Page>

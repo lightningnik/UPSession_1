@@ -1,0 +1,39 @@
+﻿<Page x:Class="Session_1.PavilionMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Session_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PavilionMainPage">
+    <Page.Resources>
+        <Style x:Key="Button">
+            <Setter Property="Control.Width" Value="165" />
+            <Setter Property="Control.Height" Value="32" />
+            <Setter Property="Control.FontSize" Value="14" />
+            <Setter Property="Control.VerticalAlignment" Value="Top" />
+            <Setter Property="Control.HorizontalAlignment" Value="Left" />
+        </Style>
+
+    </Page.Resources>
+
+    <Grid>
+        <Button x:Name="Add_Pavilion"    Content="Доб./Изм. Павильона"     Margin="0,260,0,0" Style="{StaticResource Button}"  Click="Add_Pavilion_Click"/>
+        <Button x:Name="Remove_Pavilion" Content="Удаление Павильона"       Margin="0,380,0,0" Style="{StaticResource Button}" Click="Remove_Pavilion_Click" />
+        <Button x:Name="View_Pavilion"   Content="Список Павильонов"        Margin="0,300,0,0"  Style="{StaticResource Button}"   Click="View_Pavilion_Click"/>
+        <Button x:Name="Exit"            Content="Выход"                    Margin="170,260,0,0"  Style="{DynamicResource Button}" Click="Exit_Click"/>
+        <DataGrid x:Name="DataGridView"  Height="256" VerticalAlignment="Top" Width="800" SelectedIndex="0" Focusable="False" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" IsReadOnly="True"/>
+        <TextBox x:Name="Status_Search" HorizontalAlignment="Left" Height="32" Margin="675,260,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MinPrice" HorizontalAlignment="Left" Height="32" Margin="675,300,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="MaxPrice" HorizontalAlignment="Left" Height="32" Margin="730,300,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="Floor" HorizontalAlignment="Left" Height="32" Margin="675,340,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.564,1.557"/>
+        <TextBox x:Name="Remove_Pavilion_Text" HorizontalAlignment="Left" Height="24" Margin="175,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="status_Button" Content="Поиск по статусу" Margin="500,260,0,0" Style="{StaticResource Button}" Width="175" Click="status_Button_Click"/>
+        <Button x:Name="Price_Button" Content="Поиск по диапазону цены" Margin="500,300,0,0" Style="{StaticResource Button}" Width="175" Click="Price_Button_Click"/>
+        <Button x:Name="Floor_Button" Content="Поиск по этажу" Margin="500,340,0,0" Style="{StaticResource Button}" Width="175" Click="Floor_Button_Click"/>
+        <Button Content="Поиск по всем полям" Margin="500,380,0,0" Style="{StaticResource Button}" Width="175" Click="Button_Click"/>
+        <Label x:Name="Notify"  HorizontalAlignment="Left" Margin="170,345,0,0" VerticalAlignment="Top" Width="325" Height="27"/>
+        <Button x:Name="Rent_Pavilion" Content="Аренда Павильона"      Margin="0,340,0,0" Style="{StaticResource Button}" Click="Rent_Pavilion_Click" />
+    </Grid>
+</Page>

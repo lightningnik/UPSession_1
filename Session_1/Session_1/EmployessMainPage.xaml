@@ -1,0 +1,34 @@
+﻿<Page x:Class="Session_1.EmployessMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Session_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmployessMainPage">
+    <Page.Resources>
+        <Style x:Key="Button">
+            <Setter Property="FrameworkElement.Width" Value="165" />
+            <Setter Property="FrameworkElement.Height" Value="32" />
+            <Setter Property="Control.FontSize" Value="14" />
+            <Setter Property="FrameworkElement.VerticalAlignment" Value="Top" />
+            <Setter Property="FrameworkElement.HorizontalAlignment" Value="Left" />
+        </Style>
+
+    </Page.Resources>
+
+    <Grid>
+        <DataGrid x:Name="DataGridView" HorizontalAlignment="Left" Height="256" VerticalAlignment="Top" Width="800" SelectedIndex="0" Focusable="False" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" IsReadOnly="True"/>
+        <Button x:Name="List_Emp" Content="Список Пользователей" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="150" Height="32" Click="List_Click"/>
+        <Button x:Name="Add_Emp" Content="Доб./Изм. Пользователей" HorizontalAlignment="Left" Margin="175,260,0,0" VerticalAlignment="Top" Width="150" Height="32" Click="Add_Emp_Click"/>
+        <Button x:Name="Remove_Emp" Content="Удаление Пользователей" HorizontalAlignment="Left" Margin="340,260,0,0" VerticalAlignment="Top" Width="150" Height="32" Click="Remove_Emp_Click"/>
+        <Button x:Name="Exit"            Content="Выход"                    Margin="10,297,0,0"  Style="{DynamicResource Button}" Click="Exit_Click" Width="150"/>
+        <TextBox x:Name="Remove_Emp_Text" HorizontalAlignment="Left" Height="23" Margin="340,297,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Notify"  HorizontalAlignment="Left" Margin="0,374,0,0" VerticalAlignment="Top" Width="325" Height="27"/>
+        <Button x:Name="ViewEmp" Content="Просмотр Пользователей" HorizontalAlignment="Left" Margin="340,327,0,0" VerticalAlignment="Top" Width="150" Height="32" Click="ViewEmp_Click"/>
+        <Image x:Name="testImage" HorizontalAlignment="Left" Height="179" Margin="495,261,0,0" VerticalAlignment="Top" Width="295"/>
+        <TextBox x:Name="Search" HorizontalAlignment="Left" Height="23" Margin="340,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Page>
